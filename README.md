@@ -77,27 +77,27 @@ engineer:
 ## Stack
 
 <p align="center">
-  <a href="https://www.python.org" title="Python"><img src="https://skillicons.dev/icons?i=py&theme=dark" width="48" alt="Python" title="Python" /></a>
-  <a href="https://www.djangoproject.com" title="Django"><img src="https://skillicons.dev/icons?i=django&theme=dark" width="48" alt="Django" title="Django" /></a>
-  <a href="https://www.postgresql.org" title="PostgreSQL"><img src="https://skillicons.dev/icons?i=postgres&theme=dark" width="48" alt="PostgreSQL" title="PostgreSQL" /></a>
-  <a href="https://www.mysql.com" title="MySQL"><img src="https://skillicons.dev/icons?i=mysql&theme=dark" width="48" alt="MySQL" title="MySQL" /></a>
-  <a href="https://www.docker.com" title="Docker"><img src="https://skillicons.dev/icons?i=docker&theme=dark" width="48" alt="Docker" title="Docker" /></a>
-  <a href="https://aws.amazon.com" title="AWS"><img src="https://skillicons.dev/icons?i=aws&theme=dark" width="48" alt="AWS" title="AWS" /></a>
-  <a href="https://git-scm.com" title="Git"><img src="https://skillicons.dev/icons?i=git&theme=dark" width="48" alt="Git" title="Git" /></a>
-  <a href="https://github.com" title="GitHub"><img src="https://skillicons.dev/icons?i=github&theme=dark" width="48" alt="GitHub" title="GitHub" /></a>
-  <a href="https://www.java.com" title="Java"><img src="https://skillicons.dev/icons?i=java&theme=dark" width="48" alt="Java" title="Java" /></a>
-  <a href="https://developer.mozilla.org/docs/Web/JavaScript" title="JavaScript"><img src="https://skillicons.dev/icons?i=js&theme=dark" width="48" alt="JavaScript" title="JavaScript" /></a>
+  <a href="https://www.python.org" title="Python"><img src="./assets/icons/py.svg" width="48" alt="Python" title="Python" /></a>
+  <a href="https://www.djangoproject.com" title="Django"><img src="./assets/icons/django.svg" width="48" alt="Django" title="Django" /></a>
+  <a href="https://www.postgresql.org" title="PostgreSQL"><img src="./assets/icons/postgres.svg" width="48" alt="PostgreSQL" title="PostgreSQL" /></a>
+  <a href="https://www.mysql.com" title="MySQL"><img src="./assets/icons/mysql.svg" width="48" alt="MySQL" title="MySQL" /></a>
+  <a href="https://www.docker.com" title="Docker"><img src="./assets/icons/docker.svg" width="48" alt="Docker" title="Docker" /></a>
+  <a href="https://aws.amazon.com" title="AWS"><img src="./assets/icons/aws.svg" width="48" alt="AWS" title="AWS" /></a>
+  <a href="https://git-scm.com" title="Git"><img src="./assets/icons/git.svg" width="48" alt="Git" title="Git" /></a>
+  <a href="https://github.com" title="GitHub"><img src="./assets/icons/github.svg" width="48" alt="GitHub" title="GitHub" /></a>
+  <a href="https://www.java.com" title="Java"><img src="./assets/icons/java.svg" width="48" alt="Java" title="Java" /></a>
+  <a href="https://developer.mozilla.org/docs/Web/JavaScript" title="JavaScript"><img src="./assets/icons/js.svg" width="48" alt="JavaScript" title="JavaScript" /></a>
   <br/>
-  <a href="https://react.dev" title="React"><img src="https://skillicons.dev/icons?i=react&theme=dark" width="48" alt="React" title="React" /></a>
-  <a href="https://developer.mozilla.org/docs/Web/HTML" title="HTML5"><img src="https://skillicons.dev/icons?i=html&theme=dark" width="48" alt="HTML5" title="HTML5" /></a>
-  <a href="https://developer.mozilla.org/docs/Web/CSS" title="CSS3"><img src="https://skillicons.dev/icons?i=css&theme=dark" width="48" alt="CSS3" title="CSS3" /></a>
-  <a href="https://dart.dev" title="Dart"><img src="https://skillicons.dev/icons?i=dart&theme=dark" width="48" alt="Dart" title="Dart" /></a>
-  <a href="https://flutter.dev" title="Flutter"><img src="https://skillicons.dev/icons?i=flutter&theme=dark" width="48" alt="Flutter" title="Flutter" /></a>
-  <a href="https://vercel.com" title="Vercel"><img src="https://skillicons.dev/icons?i=vercel&theme=dark" width="48" alt="Vercel" title="Vercel" /></a>
-  <a href="https://www.postman.com" title="Postman"><img src="https://skillicons.dev/icons?i=postman&theme=dark" width="48" alt="Postman" title="Postman" /></a>
-  <a href="https://www.figma.com" title="Figma"><img src="https://skillicons.dev/icons?i=figma&theme=dark" width="48" alt="Figma" title="Figma" /></a>
-  <a href="https://www.kernel.org" title="Linux"><img src="https://skillicons.dev/icons?i=linux&theme=dark" width="48" alt="Linux" title="Linux" /></a>
-  <a href="https://code.visualstudio.com" title="VS Code"><img src="https://skillicons.dev/icons?i=vscode&theme=dark" width="48" alt="VS Code" title="VS Code" /></a>
+  <a href="https://react.dev" title="React"><img src="./assets/icons/react.svg" width="48" alt="React" title="React" /></a>
+  <a href="https://developer.mozilla.org/docs/Web/HTML" title="HTML5"><img src="./assets/icons/html.svg" width="48" alt="HTML5" title="HTML5" /></a>
+  <a href="https://developer.mozilla.org/docs/Web/CSS" title="CSS3"><img src="./assets/icons/css.svg" width="48" alt="CSS3" title="CSS3" /></a>
+  <a href="https://dart.dev" title="Dart"><img src="./assets/icons/dart.svg" width="48" alt="Dart" title="Dart" /></a>
+  <a href="https://flutter.dev" title="Flutter"><img src="./assets/icons/flutter.svg" width="48" alt="Flutter" title="Flutter" /></a>
+  <a href="https://vercel.com" title="Vercel"><img src="./assets/icons/vercel.svg" width="48" alt="Vercel" title="Vercel" /></a>
+  <a href="https://www.postman.com" title="Postman"><img src="./assets/icons/postman.svg" width="48" alt="Postman" title="Postman" /></a>
+  <a href="https://www.figma.com" title="Figma"><img src="./assets/icons/figma.svg" width="48" alt="Figma" title="Figma" /></a>
+  <a href="https://www.kernel.org" title="Linux"><img src="./assets/icons/linux.svg" width="48" alt="Linux" title="Linux" /></a>
+  <a href="https://code.visualstudio.com" title="VS Code"><img src="./assets/icons/vscode.svg" width="48" alt="VS Code" title="VS Code" /></a>
 </p>
 
 <p align="center">
