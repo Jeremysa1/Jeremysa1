@@ -28,6 +28,14 @@ Fuera del código, soy alguien que aprende rápido, comunica claro y disfruta re
 
 <br/>
 
+## Cómo construyo software
+
+<p align="center">
+  <img src="./assets/ciclo-software.svg" width="100%" alt="Ciclo de vida del software: problema, análisis, diseño, desarrollo, pruebas, despliegue y solución" />
+</p>
+
+<br/>
+
 ## Lo que construyo
 
 <table>
