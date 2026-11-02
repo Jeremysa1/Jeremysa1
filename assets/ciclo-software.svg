@@ -10,10 +10,10 @@
 <style>
   text { font-family: ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace; }
   .node { fill: #0D1117; stroke: #30363D; stroke-width: 2; }
-  .node, .lbl, .seg { animation: on 15.4s linear infinite; animation-fill-mode: backwards; }
+  .node, .lbl, .seg { animation: on 15.4s linear infinite; }
   .lbl { fill: #8B949E; font-size: 13px; }
   .seg { fill: #30363D; }
-  .panel { opacity: 0; animation: show 15.4s linear infinite; animation-fill-mode: backwards; }
+  .panel { opacity: 0; animation: show 15.4s linear infinite; }
   @keyframes on {
     0%, 13.79% { fill: #00D4FF; stroke: #00D4FF; }
     14.29%, 100% { }
