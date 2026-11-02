@@ -3,6 +3,11 @@
   <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:0D1117,45:1B1F3B,100:7F5AF0&text=Jeremy%20S%C3%A1nchez&fontColor=E6EDF3&fontSize=64&fontAlignY=36&desc=Software%20Engineer%20%C2%B7%20Backend%20%C2%B7%20Data%20Systems&descAlignY=56&descSize=20&animation=fadeIn" alt="Jeremy Sánchez — Software Engineer" />
 </p>
 
+<!-- Avatar saludando -->
+<p align="center">
+  <img src="./assets/hola.svg" width="100%" alt="Jeremy, ilustrado, saluda: ¡Hola! Soy Jeremy, ingeniero de software" />
+</p>
+
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=2800&pause=900&color=7F5AF0&center=true&vCenter=true&width=640&lines=Dise%C3%B1o+sistemas+backend+que+escalan;APIs+limpias%2C+documentadas+y+seguras;Del+dato+crudo+a+decisiones+claras;Python+%C2%B7+Django+%C2%B7+PostgreSQL+%C2%B7+Docker" alt="Lo que hago" />
 </p>
@@ -72,9 +77,27 @@ engineer:
 ## Stack
 
 <p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=py,django,postgres,mysql,docker,aws,git,github,java,js,react,html,css,dart,flutter,vercel,postman,figma,linux,vscode&perline=10&theme=dark" alt="Stack" />
-  </a>
+  <a href="https://www.python.org" title="Python"><img src="https://skillicons.dev/icons?i=py&theme=dark" width="48" alt="Python" title="Python" /></a>
+  <a href="https://www.djangoproject.com" title="Django"><img src="https://skillicons.dev/icons?i=django&theme=dark" width="48" alt="Django" title="Django" /></a>
+  <a href="https://www.postgresql.org" title="PostgreSQL"><img src="https://skillicons.dev/icons?i=postgres&theme=dark" width="48" alt="PostgreSQL" title="PostgreSQL" /></a>
+  <a href="https://www.mysql.com" title="MySQL"><img src="https://skillicons.dev/icons?i=mysql&theme=dark" width="48" alt="MySQL" title="MySQL" /></a>
+  <a href="https://www.docker.com" title="Docker"><img src="https://skillicons.dev/icons?i=docker&theme=dark" width="48" alt="Docker" title="Docker" /></a>
+  <a href="https://aws.amazon.com" title="AWS"><img src="https://skillicons.dev/icons?i=aws&theme=dark" width="48" alt="AWS" title="AWS" /></a>
+  <a href="https://git-scm.com" title="Git"><img src="https://skillicons.dev/icons?i=git&theme=dark" width="48" alt="Git" title="Git" /></a>
+  <a href="https://github.com" title="GitHub"><img src="https://skillicons.dev/icons?i=github&theme=dark" width="48" alt="GitHub" title="GitHub" /></a>
+  <a href="https://www.java.com" title="Java"><img src="https://skillicons.dev/icons?i=java&theme=dark" width="48" alt="Java" title="Java" /></a>
+  <a href="https://developer.mozilla.org/docs/Web/JavaScript" title="JavaScript"><img src="https://skillicons.dev/icons?i=js&theme=dark" width="48" alt="JavaScript" title="JavaScript" /></a>
+  <br/>
+  <a href="https://react.dev" title="React"><img src="https://skillicons.dev/icons?i=react&theme=dark" width="48" alt="React" title="React" /></a>
+  <a href="https://developer.mozilla.org/docs/Web/HTML" title="HTML5"><img src="https://skillicons.dev/icons?i=html&theme=dark" width="48" alt="HTML5" title="HTML5" /></a>
+  <a href="https://developer.mozilla.org/docs/Web/CSS" title="CSS3"><img src="https://skillicons.dev/icons?i=css&theme=dark" width="48" alt="CSS3" title="CSS3" /></a>
+  <a href="https://dart.dev" title="Dart"><img src="https://skillicons.dev/icons?i=dart&theme=dark" width="48" alt="Dart" title="Dart" /></a>
+  <a href="https://flutter.dev" title="Flutter"><img src="https://skillicons.dev/icons?i=flutter&theme=dark" width="48" alt="Flutter" title="Flutter" /></a>
+  <a href="https://vercel.com" title="Vercel"><img src="https://skillicons.dev/icons?i=vercel&theme=dark" width="48" alt="Vercel" title="Vercel" /></a>
+  <a href="https://www.postman.com" title="Postman"><img src="https://skillicons.dev/icons?i=postman&theme=dark" width="48" alt="Postman" title="Postman" /></a>
+  <a href="https://www.figma.com" title="Figma"><img src="https://skillicons.dev/icons?i=figma&theme=dark" width="48" alt="Figma" title="Figma" /></a>
+  <a href="https://www.kernel.org" title="Linux"><img src="https://skillicons.dev/icons?i=linux&theme=dark" width="48" alt="Linux" title="Linux" /></a>
+  <a href="https://code.visualstudio.com" title="VS Code"><img src="https://skillicons.dev/icons?i=vscode&theme=dark" width="48" alt="VS Code" title="VS Code" /></a>
 </p>
 
 <p align="center">
