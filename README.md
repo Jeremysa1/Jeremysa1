@@ -1,6 +1,6 @@
 <!-- Cabecera -->
 <p align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:0D1117,45:1B1F3B,100:7F5AF0&text=Jeremy%20S%C3%A1nchez&fontColor=E6EDF3&fontSize=64&fontAlignY=36&desc=Software%20Engineer%20%C2%B7%20Backend%20%26%20Data%20Systems&descAlignY=56&descSize=20&animation=fadeIn" alt="Jeremy Sánchez — Software Engineer" />
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:0D1117,45:1B1F3B,100:7F5AF0&text=Jeremy%20S%C3%A1nchez&fontColor=E6EDF3&fontSize=64&fontAlignY=36&desc=Software%20Engineer%20%C2%B7%20Backend%20%C2%B7%20Data%20Systems&descAlignY=56&descSize=20&animation=fadeIn" alt="Jeremy Sánchez — Software Engineer" />
 </p>
 
 <p align="center">
