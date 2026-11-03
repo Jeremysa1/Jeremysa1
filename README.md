@@ -1,6 +1,12 @@
-<!-- Cabecera -->
+<!-- Cabecera retro -->
 <p align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:0D1117,45:1B1F3B,100:7F5AF0&text=Jeremy%20S%C3%A1nchez&fontColor=E6EDF3&fontSize=64&fontAlignY=36&desc=Software%20Engineer%20%C2%B7%20Backend%20%C2%B7%20Data%20Systems&descAlignY=56&descSize=20&animation=fadeIn" alt="Jeremy Sánchez — Software Engineer" />
+  <img src="./assets/header.svg" width="100%" alt="Jeremy Sánchez — Software Engineer · Backend · Data · Cloud" />
+</p>
+
+<!-- Idioma -->
+<p align="center">
+  <a href="https://github.com/Jeremysa1"><img src="./assets/btn-es-on.svg" height="40" alt="Español" /></a>
+  <a href="https://github.com/Jeremysa1/Jeremysa1/blob/main/README.en.md"><img src="./assets/btn-en-off.svg" height="40" alt="English" /></a>
 </p>
 
 <!-- Jeremy en pixel art: escena retro animada -->
@@ -9,7 +15,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=2800&pause=900&color=7F5AF0&center=true&vCenter=true&width=640&lines=Dise%C3%B1o+sistemas+backend+que+escalan;APIs+limpias%2C+documentadas+y+seguras;Del+dato+crudo+a+decisiones+claras;Python+%C2%B7+Django+%C2%B7+PostgreSQL+%C2%B7+Docker" alt="Lo que hago" />
+  <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=14&duration=2800&pause=900&color=7F5AF0&center=true&vCenter=true&width=640&lines=Entiendo+el+problema+antes+del+c%C3%B3digo;Del+bug+a+la+soluci%C3%B3n;Backend+%C2%B7+Datos+%C2%B7+Cloud;Rumbo+a+Arquitecto+de+Soluciones" alt="Lo que hago" />
 </p>
 
 <p align="center">
@@ -23,13 +29,21 @@
 
 ## Sobre mí
 
-Soy **Jeremy**, ingeniero de software en Medellín. Me gusta el lado del software que no se ve pero sostiene todo: **la arquitectura del backend, el modelo de datos y las APIs** que conectan un producto con el mundo.
+Soy **Jeremy**, ingeniero de software en Medellín. Me gusta el lado del software que no se ve pero sostiene todo: **la arquitectura del backend, el modelo de datos y la infraestructura** sobre la que corre un producto.
 
-Mi forma de trabajar es simple: entender bien el problema antes de escribir código. Pienso en cómo se va a mantener un sistema dentro de un año, no solo en que funcione hoy. Por eso cuido el diseño de las bases de datos, documento las APIs con OpenAPI y empaqueto todo en contenedores para que funcione igual en cualquier entorno.
+Mi forma de trabajar es simple: entender bien el problema antes de escribir código. Pienso en cómo se va a mantener un sistema dentro de un año, no solo en que funcione hoy. Por eso cuido el diseño de las bases de datos, documento lo que construyo y empaqueto todo en contenedores para que funcione igual en cualquier entorno.
 
 Además del backend, me apasionan **los datos**: convertir información desordenada en algo que un equipo pueda usar para decidir, con SQL, Python y Power BI. Y le sigo de cerca a la **ciberseguridad** y al **machine learning**, porque creo que un buen ingeniero construye pensando en cómo se rompen las cosas y en cómo se pueden hacer más inteligentes.
 
 Fuera del código, soy alguien que aprende rápido, comunica claro y disfruta resolver problemas en equipo.
+
+<br/>
+
+## Ahora mismo
+
+<p align="center">
+  <img src="./assets/quest.svg" width="100%" alt="Misión principal: certificación de Arquitecto de Soluciones. En curso: Azure, infraestructura en la nube, infraestructura como código, TypeScript y Java" />
+</p>
 
 <br/>
 
@@ -46,16 +60,16 @@ Fuera del código, soy alguien que aprende rápido, comunica claro y disfruta re
 <table>
   <tr>
     <td width="33%" valign="top">
-      <h3>⚙️ Backend & APIs</h3>
-      Servicios en <b>Python / Django</b> con autenticación, lógica de negocio y APIs REST documentadas con <b>Swagger / OpenAPI</b>.
+      <h3>⚙️ Backend</h3>
+      Servicios en <b>Python / Django</b> con autenticación, lógica de negocio e integraciones documentadas con <b>OpenAPI</b>.
     </td>
     <td width="33%" valign="top">
       <h3>📊 Datos</h3>
       Modelado en <b>PostgreSQL / MySQL</b>, consultas SQL, automatización con Python y visualización en <b>Power BI</b>.
     </td>
     <td width="33%" valign="top">
-      <h3>🚀 Entrega</h3>
-      Contenedores con <b>Docker</b>, despliegues en <b>Vercel</b> y <b>Railway</b>, y bases de <b>AWS</b>. Trabajo con Scrum y Kanban.
+      <h3>☁️ Entrega y nube</h3>
+      Contenedores con <b>Docker</b>, despliegues en <b>Vercel</b> y <b>Railway</b>, y ahora <b>Azure</b> e infraestructura cloud.
     </td>
   </tr>
 </table>
@@ -64,12 +78,12 @@ Fuera del código, soy alguien que aprende rápido, comunica claro y disfruta re
 engineer:
   name: Jeremy Sánchez
   role: Software Engineer
-  focus: [backend, apis, data]
+  focus: [backend, data, cloud]
   principles:
     - "Primero el problema, después el código"
     - "Si no está documentado, no está terminado"
     - "La seguridad se diseña desde el principio, no se agrega al final"
-  exploring: [machine-learning, cloud, ciberseguridad]
+  learning: [azure, cloud-infrastructure, iac, typescript, java]
 ```
 
 <br/>
@@ -115,9 +129,9 @@ engineer:
 
 | | Proyecto | Qué resuelve | Stack |
 |:-:|---|---|---|
-| 🏨 | [**API Hostal Santa Rosa**](https://github.com/Jeremysa1/Hostal_SanRosa) | API REST para reservas, habitaciones, clientes y sitios turísticos. Autenticación JWT, rate limiting y documentación Swagger / ReDoc, lista para apps móviles y web. | `Django REST` `PostgreSQL` `JWT` |
+| 🏨 | [**Hostal Santa Rosa**](https://github.com/Jeremysa1/Hostal_SanRosa) | Backend para reservas, habitaciones, clientes y sitios turísticos de un hostal. Autenticación JWT, control de peticiones y documentación Swagger / ReDoc, listo para apps móviles y web. | `Django REST` `PostgreSQL` `JWT` |
+| 🍔 | [**ChuzGrill**](https://github.com/Jeremysa1/ChuzGrill) | Landing para un restaurante de comidas rápidas: presentación, carta y contacto directo por WhatsApp. | `React` `Vite` `Tailwind` |
 | 🌐 | **Plataformas web full stack** | Aplicaciones con autenticación, CRUD y reglas de negocio, desplegadas en Vercel. | `Django` `React` `PostgreSQL` |
-| 🍔 | **Landing para restaurante** | Sitio de presentación y conversión para un negocio de comidas rápidas. | `React` |
 | 📱 | **App móvil** | Aplicación multiplataforma con Dart. | `Dart` |
 | 📈 | **Pipelines de análisis** | Extracción, limpieza y análisis exploratorio de datos. | `Python` `SQL` |
 
@@ -125,10 +139,9 @@ engineer:
 
 ## Actividad
 
-<!-- Las tarjetas las genera .github/workflows/profile.yml (aparecen tras su primera ejecución) -->
+<!-- La tarjeta de jugador la regenera .github/workflows/profile.yml cada día con estadísticas reales -->
 <p align="center">
-  <img src="./profile-summary-card-output/tokyonight/3-stats.svg" height="170" alt="Estadísticas" />
-  <img src="./profile-summary-card-output/tokyonight/2-most-commit-language.svg" height="170" alt="Lenguajes" />
+  <img src="./assets/player-card.svg" width="100%" alt="Tarjeta de jugador: nivel, XP, commits, pull requests, repositorios, estrellas, racha y lenguajes" />
 </p>
 
 <p align="center">
@@ -149,5 +162,5 @@ engineer:
 </p>
 
 <p align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=110&section=footer&color=0:7F5AF0,55:1B1F3B,100:0D1117" alt="" />
+  <img src="./assets/footer.svg" width="100%" alt="Gracias por jugar" />
 </p>

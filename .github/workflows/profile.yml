@@ -1,4 +1,4 @@
-# Regenera las tarjetas de estadísticas y la serpiente de contribuciones del perfil.
+# Regenera la tarjeta de jugador y la serpiente de contribuciones del perfil.
 name: Actualizar perfil
 
 on:
@@ -6,28 +6,29 @@ on:
     - cron: "0 6 * * *" # todos los días (1:00 a. m. hora Colombia)
   workflow_dispatch:
   push:
-    branches: [main]
-    paths: [".github/workflows/profile.yml"]
+    paths: [".github/workflows/profile.yml", "scripts/player_card.py"]
 
 permissions:
   contents: write
 
 jobs:
-  stats:
+  player-card:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: vn7n24fzkq/github-profile-summary-cards@release
+      - name: Generar tarjeta de jugador
         env:
-          # Si las tarjetas salen vacías, crea un token personal y guárdalo como secreto SUMMARY_GITHUB_TOKEN
-          GITHUB_TOKEN: ${{ secrets.SUMMARY_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
-        with:
-          USERNAME: ${{ github.repository_owner }}
-          BRANCH_NAME: main
-          TIME_ZONE: America/Bogota
-          THEME: tokyonight
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/player_card.py assets scripts/fonts/ps2p.woff2 "${{ github.repository_owner }}"
+      - name: Guardar cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/player-card.svg assets/player-card-en.svg
+          git diff --cached --quiet || { git commit -m "Actualiza la tarjeta de jugador" && git push; }
 
   snake:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: Platane/snk@v3

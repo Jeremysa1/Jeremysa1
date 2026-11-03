@@ -77,7 +77,7 @@
 <text x="500" y="128" font-size="14" fill="#7F5AF0" font-weight="700">FASE 03 / 07</text>
 <text x="500" y="176" font-size="38" font-weight="700" fill="#E6EDF3">Diseño</text>
 <text x="500" y="214" font-size="16" fill="#8B949E">Arquitectura, modelo de datos</text>
-<text x="500" y="238" font-size="16" fill="#8B949E">y contratos de API.</text>
+<text x="500" y="238" font-size="16" fill="#8B949E">e infraestructura.</text>
 </g>
 <g class="panel p3" style="animation-delay:5.50s">
 <text x="500" y="128" font-size="14" fill="#7F5AF0" font-weight="700">FASE 04 / 07</text>
