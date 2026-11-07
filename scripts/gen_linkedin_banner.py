@@ -1,108 +1,96 @@
-"""Genera la portada de LinkedIn (1584x396) en el mismo estilo retro que la cabecera de GitHub, sin animaciones.
+"""Genera la portada de LinkedIn (1584x396): sobria y profesional, con los colores del perfil de GitHub.
 
-Uso: python gen_linkedin_banner.py <salida.svg> <fuente.woff2> <carpeta_iconos> [es|en]
+Uso: python gen_linkedin_banner.py <salida.svg> <carpeta_fuentes> [es|en]
 Convertir a PNG, por ejemplo con Chrome: --headless --window-size=1584,396 --screenshot
+La esquina inferior izquierda queda libre: ahí LinkedIn pone la foto de perfil.
 """
 import base64
-import math
 import os
-import random
-import re
 import sys
 from html import escape
 
-OUT, FONT, ICONS = sys.argv[1], sys.argv[2], sys.argv[3]
-LANG = sys.argv[4] if len(sys.argv) > 4 else "es"
-TAG = {"es": "Del problema a la solución", "en": "From problem to solution"}[LANG]
+OUT, FONTS = sys.argv[1], sys.argv[2]
+LANG = sys.argv[3] if len(sys.argv) > 3 else "es"
+TXT = {
+    "es": {"kicker": "INGENIERO DE SOFTWARE  ·  BACKEND  ·  DATOS  ·  CLOUD",
+           "title": "Del problema a la solución.",
+           "sub": "Diseño sistemas backend, datos e infraestructura que escalan."},
+    "en": {"kicker": "SOFTWARE ENGINEER  ·  BACKEND  ·  DATA  ·  CLOUD",
+           "title": "From problem to solution.",
+           "sub": "I design and build backend systems, data and infrastructure that scale."},
+}[LANG]
+TECH = ["Python", "Django", "PostgreSQL", "Docker", "Azure"]
 
-W, H, G = 1584, 396, 8
-BG = "#0D1117"
-BANDS = ["#0D1117", "#11162A", "#161B3A", "#1E2150", "#2A2766", "#3E2F86", "#5B3FB8", "#7F5AF0"]
-FONT_CSS = ('@font-face { font-family: "PS2P"; src: url(data:font/woff2;base64,'
-            + base64.b64encode(open(FONT, "rb").read()).decode() + ') format("woff2"); }'
-            ' text { font-family: "PS2P", ui-monospace, monospace; }')
-
-
-def bands():
-    n = len(BANDS)
-    bw = math.ceil(W / n / G) * G
-    out = [f'<rect x="{i * bw}" y="0" width="{bw}" height="{H}" fill="{c}"/>' for i, c in enumerate(BANDS)]
-    for i in range(1, n):  # tramado de tablero en cada frontera
-        x0 = i * bw - G * 2
-        for gx in range(4):
-            for gy in range(0, H, G):
-                if (gx + gy // G) % 2 == (0 if gx < 2 else 1):
-                    out.append(f'<rect x="{x0 + gx * G}" y="{gy}" width="{G}" height="{G}" fill="{BANDS[i] if gx < 2 else BANDS[i - 1]}"/>')
-    return "".join(out)
+W, H = 1584, 396
+VIOLET, CYAN, INK, MUTED = "#7F5AF0", "#00D4FF", "#F2F4F8", "#9AA4B8"
 
 
-def stars():
-    rnd = random.Random(5)
+def font_face(weight):
+    data = base64.b64encode(open(os.path.join(FONTS, f"inter-{weight}.woff2"), "rb").read()).decode()
+    return f'@font-face {{ font-family: "Inter"; font-weight: {weight}; src: url(data:font/woff2;base64,{data}) format("woff2"); }}'
+
+
+def diagram(x0, y0):
+    """Diagrama de arquitectura abstracto: cliente -> servicios -> datos / nube, en líneas finas."""
+    node = 'rx="8" fill="#141A33" stroke="{c}" stroke-width="1.5"'
     out = []
-    for k in range(60):
-        x = rnd.randrange(0, W // G) * G
-        y = rnd.randrange(1, 300 // G) * G
-        if 560 < x < 1440 and 90 < y < 320:  # deja limpio el bloque de texto
-            continue
-        if k % 4 == 0:
-            out.append(f'<g fill="#FFE45C"><rect x="{x}" y="{y - 5}" width="5" height="15"/><rect x="{x - 5}" y="{y}" width="15" height="5"/></g>')
-        else:
-            out.append(f'<rect x="{x}" y="{y}" width="5" height="5" fill="#E6EDF3" opacity="{rnd.choice((.5, .8, 1))}"/>')
+    # conexiones
+    lines = [(x0 + 70, y0 + 150, x0 + 130, y0 + 150), (x0 + 210, y0 + 150, x0 + 250, y0 + 150),
+             (x0 + 250, y0 + 70, x0 + 250, y0 + 230), (x0 + 250, y0 + 70, x0 + 290, y0 + 70),
+             (x0 + 250, y0 + 150, x0 + 290, y0 + 150), (x0 + 250, y0 + 230, x0 + 290, y0 + 230)]
+    for a, b, c, d in lines:
+        out.append(f'<line x1="{a}" y1="{b}" x2="{c}" y2="{d}" stroke="#3B4470" stroke-width="1.5"/>')
+    # cliente
+    out.append(f'<rect x="{x0}" y="{y0 + 120}" width="70" height="60" {node.format(c="#3B4470")}/>'
+               f'<rect x="{x0 + 14}" y="{y0 + 134}" width="42" height="26" rx="3" fill="none" stroke="{MUTED}" stroke-opacity=".6"/>'
+               f'<rect x="{x0 + 28}" y="{y0 + 164}" width="14" height="4" rx="1" fill="{MUTED}" fill-opacity=".6"/>')
+    # servicio central
+    out.append(f'<rect x="{x0 + 130}" y="{y0 + 115}" width="80" height="70" {node.format(c=VIOLET)}/>'
+               f'<path d="M{x0 + 157} {y0 + 140} l-9 10 l9 10 M{x0 + 183} {y0 + 140} l9 10 l-9 10 M{x0 + 175} {y0 + 136} l-10 28" fill="none" stroke="{VIOLET}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>')
+    # tres destinos: nube, servicio, base de datos
+    out.append(f'<rect x="{x0 + 290}" y="{y0 + 40}" width="70" height="60" {node.format(c=CYAN)}/>'
+               f'<path d="M{x0 + 309} {y0 + 80} a9 9 0 0 1 2 -17 a12 12 0 0 1 23 -3 a9 9 0 0 1 7 20 z" fill="none" stroke="{CYAN}" stroke-width="1.8" stroke-linejoin="round"/>')
+    out.append(f'<rect x="{x0 + 290}" y="{y0 + 120}" width="70" height="60" {node.format(c="#3B4470")}/>'
+               + "".join(f'<rect x="{x0 + 306}" y="{y0 + 133 + k * 12}" width="38" height="8" rx="2" fill="none" stroke="{MUTED}" stroke-opacity=".6"/>' for k in range(3)))
+    out.append(f'<rect x="{x0 + 290}" y="{y0 + 200}" width="70" height="60" {node.format(c="#3B4470")}/>'
+               f'<ellipse cx="{x0 + 325}" cy="{y0 + 216}" rx="16" ry="5" fill="none" stroke="{MUTED}" stroke-opacity=".7"/>'
+               f'<path d="M{x0 + 309} {y0 + 216} v22 a16 5 0 0 0 32 0 v-22 M{x0 + 309} {y0 + 227} a16 5 0 0 0 32 0" fill="none" stroke="{MUTED}" stroke-opacity=".7"/>')
+    # puntos de conexión
+    for cx, cy in ((x0 + 250, y0 + 150), (x0 + 250, y0 + 70), (x0 + 250, y0 + 230)):
+        out.append(f'<circle cx="{cx}" cy="{cy}" r="3.5" fill="{VIOLET}"/>')
     return "".join(out)
 
 
-def wave():
+def pills(x, y):
     out = []
-    for x in range(0, W, G):
-        y = int(round((350 + 14 * math.sin(2 * math.pi * x / 640 + 0.6)) / G)) * G
-        out.append(f'<rect x="{x}" y="{y}" width="{G}" height="{H - y}" fill="{BG}"/>')
+    for t in TECH:
+        w = 22 + len(t) * 9.4
+        out.append(f'<rect x="{x}" y="{y}" width="{w:.0f}" height="32" rx="16" fill="#151B36" stroke="#2E3666"/>'
+                   f'<text x="{x + w / 2:.0f}" y="{y + 21}" font-size="15" font-weight="600" fill="#C9D1E6" text-anchor="middle">{escape(t)}</text>')
+        x += w + 10
     return "".join(out)
 
 
-def shadow_text(x, y, size, txt, fill, shadow):
-    s = max(2, size // 10)
-    return (f'<text x="{x + s * 2}" y="{y + s * 2}" font-size="{size}" fill="{BG}" text-anchor="middle" opacity=".7">{txt}</text>'
-            f'<text x="{x + s}" y="{y + s}" font-size="{size}" fill="{shadow}" text-anchor="middle">{txt}</text>'
-            f'<text x="{x}" y="{y}" font-size="{size}" fill="{fill}" text-anchor="middle">{txt}</text>')
-
-
-def notes(x0, y0):
-    """Notas BUG -> IDEA -> FIX, como en la escena de GitHub."""
-    out = []
-    for i, (label, col) in enumerate((("BUG", "#FF6B8A"), ("IDEA", "#FFD84A"), ("FIX", "#5BE49B"))):
-        x = x0 + i * 112
-        out.append(f'<rect x="{x + 5}" y="{y0 + 5}" width="76" height="62" fill="#05070C" opacity=".5"/>'
-                   f'<rect x="{x}" y="{y0}" width="76" height="62" fill="{col}"/>'
-                   f'<rect x="{x + 34}" y="{y0 - 6}" width="10" height="8" fill="#E43B44"/>'
-                   f'<text x="{x + 38}" y="{y0 + 40}" font-size="13" fill="#1F2340" text-anchor="middle">{label}</text>')
-        if i < 2:
-            ax = x + 82
-            out.append(f'<g fill="#B9A6FF"><rect x="{ax}" y="{y0 + 28}" width="14" height="6"/><rect x="{ax + 14}" y="{y0 + 22}" width="6" height="18"/></g>')
-    return "".join(out)
-
-
-def icons(names, x0, y0, step):
-    out = []
-    for k, n in enumerate(names):
-        svg = open(os.path.join(ICONS, f"{n}.svg"), encoding="utf-8").read()
-        rects = re.search(r"<g>(.*)</g>", svg).group(1)
-        out.append(f'<g transform="translate({x0 + k * step} {y0 - 4})">{rects}</g>')
-    return "".join(out)
-
-
-CX = 1000
-svg = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" shape-rendering="crispEdges">',
-       f'<style>{FONT_CSS}</style>',
-       '<defs><pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" opacity=".1"/></pattern></defs>',
-       bands(), stars(),
-       notes(64, 52),
-       shadow_text(CX, 142, 56, "Jeremy Sánchez", "#F4F1FF", "#7F5AF0"),
-       f'<text x="{CX}" y="190" font-size="18" fill="#B9F3FF" text-anchor="middle">SOFTWARE ENGINEER · BACKEND · DATA · CLOUD</text>',
-       f'<g fill="#FFE45C"><rect x="{CX - len(TAG) * 8 - 26}" y="214" width="5" height="16"/><rect x="{CX - len(TAG) * 8 - 21}" y="217" width="5" height="10"/><rect x="{CX - len(TAG) * 8 - 16}" y="220" width="4" height="4"/></g>',
-       f'<text x="{CX + 4}" y="230" font-size="16" fill="#FFE45C" text-anchor="middle">{escape(TAG)}</text>',
-       icons(["py", "django", "postgres", "docker", "azure", "ts", "java", "git"], CX - 4 * 60 + 6, 262, 60),
-       wave(),
-       f'<rect width="{W}" height="{H}" fill="url(#scan)"/>', '</svg>']
+TX = 520  # bloque de texto a la derecha de la zona de la foto
+svg = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">',
+       f'<style>{font_face(400)}{font_face(600)}{font_face(700)} text {{ font-family: "Inter", "Segoe UI", sans-serif; }}</style>',
+       '<defs>'
+       '<linearGradient id="bg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0A0E1A"/><stop offset=".55" stop-color="#11162B"/><stop offset="1" stop-color="#1C1A45"/></linearGradient>'
+       f'<radialGradient id="glow" cx=".82" cy=".45" r=".5"><stop offset="0" stop-color="{VIOLET}" stop-opacity=".28"/><stop offset="1" stop-color="{VIOLET}" stop-opacity="0"/></radialGradient>'
+       f'<linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{VIOLET}"/><stop offset="1" stop-color="{CYAN}"/></linearGradient>'
+       '<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="#FFFFFF" fill-opacity=".06"/></pattern>'
+       '</defs>',
+       f'<rect width="{W}" height="{H}" fill="url(#bg)"/>',
+       f'<rect width="{W}" height="{H}" fill="url(#dots)"/>',
+       f'<rect width="{W}" height="{H}" fill="url(#glow)"/>',
+       f'<text x="{TX}" y="128" font-size="16" font-weight="600" letter-spacing="2" fill="{CYAN}">{escape(TXT["kicker"])}</text>',
+       f'<rect x="{TX}" y="146" width="64" height="4" rx="2" fill="url(#accent)"/>',
+       f'<text x="{TX}" y="204" font-size="44" font-weight="700" fill="{INK}">{escape(TXT["title"])}</text>',
+       f'<text x="{TX}" y="244" font-size="19" font-weight="400" fill="{MUTED}">{escape(TXT["sub"])}</text>',
+       pills(TX, 282),
+       diagram(1196, 60),
+       f'<rect y="{H - 4}" width="{W}" height="4" fill="url(#accent)" opacity=".85"/>',
+       '</svg>']
 
 with open(OUT, "w", encoding="utf-8") as fh:
     fh.write("".join(svg))
