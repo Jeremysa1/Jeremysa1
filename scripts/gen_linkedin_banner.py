@@ -71,6 +71,66 @@ def pills(x, y):
     return "".join(out)
 
 
+def blueprint():
+    """Cuadrícula de plano técnico: líneas finas cada 24 px y más marcadas cada 96 px."""
+    out = []
+    for x in range(0, W, 24):
+        out.append(f'<line x1="{x}" y1="0" x2="{x}" y2="{H}" stroke="#7CC4F5" stroke-opacity="{.07 if x % 96 == 0 else .03}"/>')
+    for y in range(0, H, 24):
+        out.append(f'<line x1="0" y1="{y}" x2="{W}" y2="{y}" stroke="#7CC4F5" stroke-opacity="{.07 if y % 96 == 0 else .03}"/>')
+    return "".join(out)
+
+
+def code_block(x, y):
+    """Código tenue: el proceso de resolver un problema, paso a paso."""
+    kw, fn, tx = "#5FA8F5", "#9FD3FA", "#7F93AD"
+    lines = [
+        f'<tspan fill="{kw}">class</tspan> <tspan fill="{fn}">Solution</tspan>:',
+        f'    <tspan fill="{kw}">def</tspan> <tspan fill="{fn}">solve</tspan>(self, problem):',
+        f'        req  = <tspan fill="{fn}">analyze</tspan>(problem)',
+        f'        arch = <tspan fill="{fn}">design</tspan>(req)',
+        f'        app  = <tspan fill="{fn}">build</tspan>(arch)',
+        f'        <tspan fill="{fn}">test</tspan>(app)',
+        f'        <tspan fill="{kw}">return</tspan> <tspan fill="{fn}">deploy</tspan>(app)',
+    ]
+    out = [f'<g opacity=".32" font-family="Consolas, monospace" font-size="14" fill="{tx}">']
+    for i, ln in enumerate(lines):
+        out.append(f'<text x="{x + 34}" y="{y + i * 22}" xml:space="preserve" style="font-family: Consolas, monospace">{ln}</text>'
+                   f'<text x="{x}" y="{y + i * 22}" fill="#3E5677" style="font-family: Consolas, monospace">{i + 1:>2}</text>')
+    out.append('</g>')
+    return "".join(out)
+
+
+def traces():
+    """Trazas de circuito / bus de sistema con nodos en los quiebres."""
+    paths = [
+        "M 470 24 H 760 V 56 H 1100 V 32 H 1380",
+        "M 600 372 H 880 V 348 H 1130 V 372 H 1300",
+        "M 1060 330 V 300 H 1150 V 210 H 1196",
+        "M 0 252 H 40 V 236 H 120",
+    ]
+    out = []
+    for d in paths:
+        out.append(f'<path d="{d}" fill="none" stroke="#2F7BEB" stroke-opacity=".28" stroke-width="1.5"/>')
+        pts, cur, x = [], None, 0
+        toks = d.split()
+        i = 0
+        while i < len(toks):
+            t = toks[i]
+            if t == "M":
+                x, y = float(toks[i + 1]), float(toks[i + 2]); i += 3
+            elif t == "H":
+                x = float(toks[i + 1]); i += 2
+            elif t == "V":
+                y = float(toks[i + 1]); i += 2
+            pts.append((x, y))
+        for (px, py) in pts[1:]:
+            out.append(f'<rect x="{px - 3}" y="{py - 3}" width="6" height="6" fill="#2F7BEB" fill-opacity=".55"/>')
+        sx, sy = pts[0]
+        out.append(f'<circle cx="{sx}" cy="{sy}" r="3.5" fill="none" stroke="#7CC4F5" stroke-opacity=".6"/>')
+    return "".join(out)
+
+
 TX = 520  # bloque de texto a la derecha de la zona de la foto
 svg = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">',
        f'<style>{font_face(400)}{font_face(600)}{font_face(700)} text {{ font-family: "Inter", "Segoe UI", sans-serif; }}</style>',
@@ -81,8 +141,10 @@ svg = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBo
        '<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="#FFFFFF" fill-opacity=".06"/></pattern>'
        '</defs>',
        f'<rect width="{W}" height="{H}" fill="url(#bg)"/>',
-       f'<rect width="{W}" height="{H}" fill="url(#dots)"/>',
+       blueprint(),
        f'<rect width="{W}" height="{H}" fill="url(#glow)"/>',
+       traces(),
+       code_block(40, 52),
        f'<text x="{TX}" y="128" font-size="16" font-weight="600" letter-spacing="2" fill="{SKY}">{escape(TXT["kicker"])}</text>',
        f'<rect x="{TX}" y="146" width="64" height="4" rx="2" fill="url(#accent)"/>',
        f'<text x="{TX}" y="204" font-size="44" font-weight="700" fill="{INK}">{escape(TXT["title"])}</text>',
