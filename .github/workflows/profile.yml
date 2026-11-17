@@ -1,4 +1,4 @@
-# Regenera la tarjeta de jugador y la serpiente de contribuciones del perfil.
+# Regenera la tarjeta de estadísticas del perfil.
 name: Actualizar perfil
 
 on:
@@ -6,40 +6,23 @@ on:
     - cron: "0 6 * * *" # todos los días (1:00 a. m. hora Colombia)
   workflow_dispatch:
   push:
-    paths: [".github/workflows/profile.yml", "scripts/player_card.py"]
+    paths: [".github/workflows/profile.yml", "scripts/stats_card.py"]
 
 permissions:
   contents: write
 
 jobs:
-  player-card:
+  stats:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Generar tarjeta de jugador
+      - name: Generar tarjeta de estadísticas
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/player_card.py assets scripts/fonts/ps2p.woff2 "${{ github.repository_owner }}"
+        run: python3 scripts/stats_card.py assets "${{ github.repository_owner }}"
       - name: Guardar cambios
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/player-card.svg assets/player-card-en.svg
-          git diff --cached --quiet || { git commit -m "Actualiza la tarjeta de jugador" && git push; }
-
-  snake:
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: Platane/snk@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-snake.svg?color_snake=#7F5AF0
-            dist/github-snake-dark.svg?palette=github-dark&color_snake=#00D4FF
-      - uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git add assets/stats.svg assets/stats-en.svg
+          git diff --cached --quiet || { git commit -m "Actualiza las estadísticas" && git push; }

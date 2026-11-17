@@ -1,21 +1,21 @@
-<!-- Retro header -->
+<!-- Header -->
 <p align="center">
   <img src="./assets/header.svg" width="100%" alt="Jeremy Sánchez — Software Engineer · Backend · Data · Cloud" />
 </p>
 
 <!-- Language -->
 <p align="center">
-  <a href="https://github.com/Jeremysa1"><img src="./assets/btn-es-off.svg" height="40" alt="Español" /></a>
-  <a href="https://github.com/Jeremysa1/Jeremysa1/blob/main/README.en.md"><img src="./assets/btn-en-on.svg" height="40" alt="English" /></a>
+  <a href="https://github.com/Jeremysa1"><img src="./assets/btn-es-off.svg" height="34" alt="Español" /></a>
+  <a href="https://github.com/Jeremysa1/Jeremysa1/blob/main/README.en.md"><img src="./assets/btn-en-on.svg" height="34" alt="English" /></a>
 </p>
 
-<!-- Pixel art Jeremy: animated retro scene -->
+<!-- Workspace: editor, terminal and the path from problem to solution -->
 <p align="center">
-  <img src="./assets/jeremy-pixel-en.svg" width="100%" alt="Pixel art Jeremy waves: Hi! I'm Jeremy, software engineer" />
+  <img src="./assets/workspace-en.svg" width="100%" alt="Editor with an engineer's process, terminal with tests and deploy, and the path from problem to solution" />
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=14&duration=2800&pause=900&color=7F5AF0&center=true&vCenter=true&width=640&lines=I+understand+the+problem+before+the+code;From+bug+to+solution;Backend+%C2%B7+Data+%C2%B7+Cloud;On+my+way+to+Solutions+Architect" alt="What I do" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2800&pause=900&color=7F5AF0&center=true&vCenter=true&width=640&lines=I+understand+the+problem+before+the+code;From+bug+to+solution;Backend+%C2%B7+Data+%C2%B7+Cloud;On+my+way+to+Solutions+Architect" alt="What I do" />
 </p>
 
 <p align="center">
@@ -42,7 +42,7 @@ Outside of code, I'm a fast learner, a clear communicator and someone who enjoys
 ## Right now
 
 <p align="center">
-  <img src="./assets/quest-en.svg" width="100%" alt="Main quest: Solutions Architect certification. Ongoing: Azure, cloud infrastructure, infrastructure as code, TypeScript and Java" />
+  <img src="./assets/focus-en.svg" width="100%" alt="Current goal: Solutions Architect certification. Ongoing: Azure, cloud infrastructure, infrastructure as code, TypeScript and Java" />
 </p>
 
 <br/>
@@ -91,27 +91,27 @@ engineer:
 ## Stack
 
 <p align="center">
-  <a href="https://www.python.org" title="Python"><img src="./assets/icons/py.svg" width="48" alt="Python" title="Python" /></a>
-  <a href="https://www.djangoproject.com" title="Django"><img src="./assets/icons/django.svg" width="48" alt="Django" title="Django" /></a>
-  <a href="https://www.postgresql.org" title="PostgreSQL"><img src="./assets/icons/postgres.svg" width="48" alt="PostgreSQL" title="PostgreSQL" /></a>
-  <a href="https://www.mysql.com" title="MySQL"><img src="./assets/icons/mysql.svg" width="48" alt="MySQL" title="MySQL" /></a>
-  <a href="https://www.docker.com" title="Docker"><img src="./assets/icons/docker.svg" width="48" alt="Docker" title="Docker" /></a>
-  <a href="https://aws.amazon.com" title="AWS"><img src="./assets/icons/aws.svg" width="48" alt="AWS" title="AWS" /></a>
-  <a href="https://git-scm.com" title="Git"><img src="./assets/icons/git.svg" width="48" alt="Git" title="Git" /></a>
-  <a href="https://github.com" title="GitHub"><img src="./assets/icons/github.svg" width="48" alt="GitHub" title="GitHub" /></a>
-  <a href="https://www.java.com" title="Java"><img src="./assets/icons/java.svg" width="48" alt="Java" title="Java" /></a>
-  <a href="https://developer.mozilla.org/docs/Web/JavaScript" title="JavaScript"><img src="./assets/icons/js.svg" width="48" alt="JavaScript" title="JavaScript" /></a>
+  <a href="https://www.python.org" title="Python"><img src="https://skillicons.dev/icons?i=py&theme=dark" width="48" alt="Python" title="Python" /></a>
+  <a href="https://www.djangoproject.com" title="Django"><img src="https://skillicons.dev/icons?i=django&theme=dark" width="48" alt="Django" title="Django" /></a>
+  <a href="https://www.postgresql.org" title="PostgreSQL"><img src="https://skillicons.dev/icons?i=postgres&theme=dark" width="48" alt="PostgreSQL" title="PostgreSQL" /></a>
+  <a href="https://www.mysql.com" title="MySQL"><img src="https://skillicons.dev/icons?i=mysql&theme=dark" width="48" alt="MySQL" title="MySQL" /></a>
+  <a href="https://www.docker.com" title="Docker"><img src="https://skillicons.dev/icons?i=docker&theme=dark" width="48" alt="Docker" title="Docker" /></a>
+  <a href="https://aws.amazon.com" title="AWS"><img src="https://skillicons.dev/icons?i=aws&theme=dark" width="48" alt="AWS" title="AWS" /></a>
+  <a href="https://git-scm.com" title="Git"><img src="https://skillicons.dev/icons?i=git&theme=dark" width="48" alt="Git" title="Git" /></a>
+  <a href="https://github.com" title="GitHub"><img src="https://skillicons.dev/icons?i=github&theme=dark" width="48" alt="GitHub" title="GitHub" /></a>
+  <a href="https://www.java.com" title="Java"><img src="https://skillicons.dev/icons?i=java&theme=dark" width="48" alt="Java" title="Java" /></a>
+  <a href="https://developer.mozilla.org/docs/Web/JavaScript" title="JavaScript"><img src="https://skillicons.dev/icons?i=js&theme=dark" width="48" alt="JavaScript" title="JavaScript" /></a>
   <br/>
-  <a href="https://react.dev" title="React"><img src="./assets/icons/react.svg" width="48" alt="React" title="React" /></a>
-  <a href="https://developer.mozilla.org/docs/Web/HTML" title="HTML5"><img src="./assets/icons/html.svg" width="48" alt="HTML5" title="HTML5" /></a>
-  <a href="https://developer.mozilla.org/docs/Web/CSS" title="CSS3"><img src="./assets/icons/css.svg" width="48" alt="CSS3" title="CSS3" /></a>
-  <a href="https://dart.dev" title="Dart"><img src="./assets/icons/dart.svg" width="48" alt="Dart" title="Dart" /></a>
-  <a href="https://flutter.dev" title="Flutter"><img src="./assets/icons/flutter.svg" width="48" alt="Flutter" title="Flutter" /></a>
-  <a href="https://vercel.com" title="Vercel"><img src="./assets/icons/vercel.svg" width="48" alt="Vercel" title="Vercel" /></a>
-  <a href="https://www.postman.com" title="Postman"><img src="./assets/icons/postman.svg" width="48" alt="Postman" title="Postman" /></a>
-  <a href="https://www.figma.com" title="Figma"><img src="./assets/icons/figma.svg" width="48" alt="Figma" title="Figma" /></a>
-  <a href="https://www.kernel.org" title="Linux"><img src="./assets/icons/linux.svg" width="48" alt="Linux" title="Linux" /></a>
-  <a href="https://code.visualstudio.com" title="VS Code"><img src="./assets/icons/vscode.svg" width="48" alt="VS Code" title="VS Code" /></a>
+  <a href="https://react.dev" title="React"><img src="https://skillicons.dev/icons?i=react&theme=dark" width="48" alt="React" title="React" /></a>
+  <a href="https://developer.mozilla.org/docs/Web/HTML" title="HTML5"><img src="https://skillicons.dev/icons?i=html&theme=dark" width="48" alt="HTML5" title="HTML5" /></a>
+  <a href="https://developer.mozilla.org/docs/Web/CSS" title="CSS3"><img src="https://skillicons.dev/icons?i=css&theme=dark" width="48" alt="CSS3" title="CSS3" /></a>
+  <a href="https://dart.dev" title="Dart"><img src="https://skillicons.dev/icons?i=dart&theme=dark" width="48" alt="Dart" title="Dart" /></a>
+  <a href="https://flutter.dev" title="Flutter"><img src="https://skillicons.dev/icons?i=flutter&theme=dark" width="48" alt="Flutter" title="Flutter" /></a>
+  <a href="https://vercel.com" title="Vercel"><img src="https://skillicons.dev/icons?i=vercel&theme=dark" width="48" alt="Vercel" title="Vercel" /></a>
+  <a href="https://www.postman.com" title="Postman"><img src="https://skillicons.dev/icons?i=postman&theme=dark" width="48" alt="Postman" title="Postman" /></a>
+  <a href="https://www.figma.com" title="Figma"><img src="https://skillicons.dev/icons?i=figma&theme=dark" width="48" alt="Figma" title="Figma" /></a>
+  <a href="https://www.kernel.org" title="Linux"><img src="https://skillicons.dev/icons?i=linux&theme=dark" width="48" alt="Linux" title="Linux" /></a>
+  <a href="https://code.visualstudio.com" title="VS Code"><img src="https://skillicons.dev/icons?i=vscode&theme=dark" width="48" alt="VS Code" title="VS Code" /></a>
 </p>
 
 <p align="center">
@@ -139,20 +139,9 @@ engineer:
 
 ## Activity
 
-<!-- The player card is regenerated daily by .github/workflows/profile.yml with real stats -->
+<!-- Stats card regenerated daily by .github/workflows/profile.yml -->
 <p align="center">
-  <img src="./assets/player-card-en.svg" width="100%" alt="Player card: level, XP, commits, pull requests, repositories, stars, streak and languages" />
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=Jeremysa1&theme=tokyonight&hide_border=true&background=0D1117&ring=7F5AF0&fire=7F5AF0&currStreakLabel=7F5AF0" alt="Contribution streak" />
-</p>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Jeremysa1/Jeremysa1/output/github-snake-dark.svg" />
-    <img src="https://raw.githubusercontent.com/Jeremysa1/Jeremysa1/output/github-snake.svg" alt="Contributions" />
-  </picture>
+  <img src="./assets/stats-en.svg" width="100%" alt="GitHub stats: commits, contributions, pull requests, repositories, stars, streak and languages" />
 </p>
 
 <br/>
@@ -162,5 +151,5 @@ engineer:
 </p>
 
 <p align="center">
-  <img src="./assets/footer-en.svg" width="100%" alt="Thanks for playing" />
+  <img src="./assets/footer.svg" width="100%" alt="" />
 </p>
