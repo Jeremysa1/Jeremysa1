@@ -129,6 +129,7 @@ engineer:
 
 | | Project | What it solves | Stack |
 |:-:|---|---|---|
+| 🎓 | [**SIGEA**](https://github.com/Jeremysa1/SIGEA) | Integrated evidence management system for university accreditation: centralizes the evidence for Colombia's 12 CNA quality factors, with review, versioning, access control and a full audit trail. | `Django` `PostgreSQL` `Zero-Trust` |
 | 🏨 | [**Hostal Santa Rosa**](https://github.com/Jeremysa1/Hostal_SanRosa) | Backend for a hostel's bookings, rooms, guests and tourist spots. JWT authentication, rate limiting and Swagger / ReDoc docs, ready for mobile and web apps. | `Django REST` `PostgreSQL` `JWT` |
 | 🍔 | [**ChuzGrill**](https://github.com/Jeremysa1/ChuzGrill) | Landing page for a fast-food restaurant: brand, menu and direct contact through WhatsApp. | `React` `Vite` `Tailwind` |
 | 🌐 | **Full-stack web platforms** | Apps with authentication, CRUD and business rules, deployed on Vercel. | `Django` `React` `PostgreSQL` |
